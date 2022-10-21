@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culture of Medellín</title>
+    <title>Registrarse</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <!-- Estilos propios -->
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/init.css">
     <!-- CDN font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- Normalize -->
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-    <header class="logo-container">
+    <header class="header-container">
         <div class="circle-container">
             <img class="img-logo" src="./assets/img/logo.png">
         </div>
@@ -23,23 +25,24 @@
     <main class="main-container">
         <div class="flex-form-container">
             <div class="inputs-container">
-                <div class="input-group">
-                    <input class="input-data" type="text" placeholder="nombre">
+                <div class="input-group text-left">
+                    <h2 class="title-base">Cultura Medellinense</h2>
+                    <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat velit,
+                        doloremque mollitia omnis quisquam reprehenderit beatae delectus repudiandae. Reiciendis
+                        perferendis soluta molestias molestiae vel. Voluptatem dolore blanditiis impedit laborum nam?
+                    </p>
                 </div>
                 <div class="input-group">
-                    <input class="input-data" type="email" placeholder="email">
+                    <input class="background-focus input-data" type="text" placeholder="Inserte tu nombre">
                 </div>
                 <div class="input-group">
-                    <input class="input-data" type="number" placeholder="número">
-                </div>
-                <div class="input-group">
-                    <input class="input-data-pass" type="password" placeholder="Password">
-                    <button type="button"><i class="fa-solid fa-eye"></i></button>
+                    <button class="btn-submit" type="submit"><i class="fa-regular fa-circle-question"></i> Iniciar
+                        juego</button>
                 </div>
             </div>
             <div class="img-container">
                 <div class="img-background">
-                    <img src="./assets/img/coltejer.jpg">
+                    <img class="img-coltejer" src="./assets/img/coltejer.jpg">
                 </div>
             </div>
         </div>
