@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
+html {
+    font-size: 17px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::root{
+    --color-main:#000;
+    --color-secund:#f50;
+    --blanco:#fff;
+}

@@ -1,0 +1,44 @@
+
+
+
+.flex-form-container{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #7779;
+    border: 6px solid white;
+
+}
+
+
+.inputs-container{
+    border: 1px solid black;
+    padding: 0px 10px;
+}
+
+.input-contain{
+    width: 100%;    
+}
+
+
+.img-container{
+    border: 1px solid black;
+}
+
+
+
+.img-background{
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.img-direct{
+    width: 450px;
+}
+

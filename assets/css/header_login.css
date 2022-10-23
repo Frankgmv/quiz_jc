@@ -1,0 +1,55 @@
+@import "./variables.css";
+
+body {
+    background-image: url('../img/coltejer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header-container {
+    background: linear-gradient(to right, #3c79, #fff9);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    margin-left: 20px;
+}
+
+.img-logo {
+    margin: auto;
+    width: 110px;
+}
+
+.title-container {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.title-page {
+    font-weight: bold;
+    font-family: 'Mitr', monospace;
+}
+.title-page:hover {
+    text-shadow: 3px 3px 5px #222;
+}
+
+@media screen and (max-width:500px) {
+
+    .title-page {
+        font-weight: 200;
+    }
+
+    .logo-container {
+        margin-left: 5px;
+    }
+}
