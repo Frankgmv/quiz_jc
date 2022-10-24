@@ -12,7 +12,6 @@ html {
 }
 
 ::root{
-    --color-main:#000;
-    --color-secund:#f50;
-    --blanco:#fff;
+    --verde-main:#000;
+    --verde-claro:#f50;
 }
