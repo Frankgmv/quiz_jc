@@ -1,2 +1,7 @@
-@import "./header_login.css";
-@import "./form-login.css";
+/* Normalize */
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+/* style encabezado log in*/
+@import "./header-login.css";
+
+/* style contenido principal del log in*/
+@import "./content-login.css";

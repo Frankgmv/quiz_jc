@@ -1,4 +1,4 @@
-@import "./variables.css";
+@import "adds.css";
 
 .flex-form-container {
     margin: 50px;
@@ -37,7 +37,6 @@
 
 .text-base {
     text-align: justify;
-    /* font-family: verdana, Geneva, Tahoma, sans-serif; */
     font-family: 'Poppins';
     color: #fff;
     font-weight: 500;

@@ -5,13 +5,14 @@ html {
     font-size: 17px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-::root{
-    --verde-main:#000;
-    --verde-claro:#f50;
+::root {
+    --verde-main: #3c79;
+    --verde-btn-normal: #2a7;
+    --verde-btn-active: #2f8;
 }
