@@ -5,3 +5,6 @@
 
 /* style contenido principal del log in*/
 @import "./content-login.css";
+
+/* style página principal de preguntas */
+@import "./main.css";
