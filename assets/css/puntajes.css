@@ -7,7 +7,7 @@
 }
 
 .container-general-puntaje {
-    border: 5px solid #2c79;
+    border: 5px solid #3c79;
     background-color: #1119;
     width: 400px;
     border-radius: 15px;
@@ -19,9 +19,9 @@
 
 .title-text {
     text-align: center;
-    text-transform: capitalize; 
-    background: linear-gradient(to bottom,  #2c19  , #2c79);
-    border-bottom: 2px solid #2c79;
+    text-transform: capitalize;
+    background: linear-gradient(to bottom, #3c78, #3c78);
+    border-bottom: 2px solid #3c78;
 
 }
 
@@ -41,23 +41,26 @@
     flex-direction: column;
     color: #fff;
 }
-.img-content{
+
+.img-content {
     width: 100%;
     display: flex;
     color: yellow;
 }
-.img-content i{
-    font-size: 3.5em;
+
+.img-content i {
+    font-size: 3.1em;
     margin: 20px auto;
 }
-.img-content i:hover{
+
+.img-content i:hover {
     font-size: 5.1em;
     rotate: -350deg;
-    transition: all .4s, rotate 1s ;
-    -webkit-transition: all .4s, rotate 1s ;
-    -moz-transition: all .4s, rotate 1s ;
-    -ms-transition: all .4s, rotate 1s ;
-    -o-transition: all .4s, rotate 1s ;
+    transition: all .4s, rotate 1s;
+    -webkit-transition: all .4s, rotate 1s;
+    -moz-transition: all .4s, rotate 1s;
+    -ms-transition: all .4s, rotate 1s;
+    -o-transition: all .4s, rotate 1s;
 }
 
 .resultado-preguntas {
@@ -74,10 +77,10 @@
 
 .contain-complemento {
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
-    background: linear-gradient(to top,  #2c19  , #2c79);
-    border-top: 2px solid #2c79;
+    background: linear-gradient(to top, #2c78, #3c78);
+    border-top: 2px solid #3c78;
     height: 50px;
 }
 
@@ -96,15 +99,28 @@
     -o-transition: all 1s;
 }
 
-.resultado-puntaje, .resultado-preguntas{
+.resultado-puntaje, .resultado-preguntas {
     color: #fffc;
 }
 
-.ptj, .puntos{
+.ptj, .puntos {
     font-size: 1.2em;
     color: #fff;
 }
-.ptj:hover, .puntos:hover{
+
+.ptj:hover, .puntos:hover {
     font-size: 1.21em;
     color: #1f9;
+}
+
+
+@media screen and (max-width:418px) {
+
+    .container-principal-puntaje {
+        padding: 10px;
+    }
+
+    .container-general-puntaje {
+        min-width: 200px;
+    }
 }

@@ -24,7 +24,7 @@ html {
     padding: 20px;
     display: flex;
     flex-wrap: nowrap;
-    border: 6px solid #3c79;
+    outline: 6px solid #3c79;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -141,11 +141,10 @@ html {
 }
 
 .buttons a:hover, a:active {
-    /* background-color: #2c5; */
     background: linear-gradient(to bottom ,#1c7, #6c5);
     height: 41px;
     width: 101px;
-    border: 2px solid #fff9;
+    outline: 2px solid #fff9;
     transition: all .2s border .1s;
     -webkit-transition: all .2s border .1s;
     -moz-transition: all .2s border .1s;
