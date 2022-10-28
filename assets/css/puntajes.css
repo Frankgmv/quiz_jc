@@ -1,0 +1,110 @@
+.container-principal-puntaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    cursor: pointer;
+}
+
+.container-general-puntaje {
+    border: 5px solid #2c79;
+    background-color: #1119;
+    width: 400px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.title-text {
+    text-align: center;
+    text-transform: capitalize; 
+    background: linear-gradient(to bottom,  #2c19  , #2c79);
+    border-bottom: 2px solid #2c79;
+
+}
+
+.title-puntaje {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.9rem;
+    text-shadow: 5px 4px 11px #222;
+}
+
+.contain-puntaje {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.img-content{
+    width: 100%;
+    display: flex;
+    color: yellow;
+}
+.img-content i{
+    font-size: 3.5em;
+    margin: 20px auto;
+}
+.img-content i:hover{
+    font-size: 5.1em;
+    rotate: -350deg;
+    transition: all .4s, rotate 1s ;
+    -webkit-transition: all .4s, rotate 1s ;
+    -moz-transition: all .4s, rotate 1s ;
+    -ms-transition: all .4s, rotate 1s ;
+    -o-transition: all .4s, rotate 1s ;
+}
+
+.resultado-preguntas {
+    font-size: 2.3rem;
+    margin: 6px 0 0 0;
+    font-weight: bold;
+}
+
+.resultado-puntaje {
+    font-size: 2.3rem;
+    margin: 12px 0px;
+    font-weight: bold;
+}
+
+.contain-complemento {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    background: linear-gradient(to top,  #2c19  , #2c79);
+    border-top: 2px solid #2c79;
+    height: 50px;
+}
+
+.complemento {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.complemento:hover {
+    font-size: 1.8rem;
+    color: yellow;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.resultado-puntaje, .resultado-preguntas{
+    color: #fffc;
+}
+
+.ptj, .puntos{
+    font-size: 1.2em;
+    color: #fff;
+}
+.ptj:hover, .puntos:hover{
+    font-size: 1.21em;
+    color: #1f9;
+}
