@@ -74,7 +74,7 @@ html {
     text-shadow: 2px 2px 4px black;
 }
 
-.cont-answer-1, .cont-answer-2, .buttons {
+.cont-answer, .buttons {
     font-size: 1.4rem;
     display: inline-block;
     padding-left: 80px;
@@ -90,14 +90,14 @@ html {
     -o-border-radius: 10px;
 }
 
-.answer-index-1, .answer-index-2 {
+.answer-index {
     width: 40px;
     margin: 15px 0px;
     color: var(--blanco-main);
 }
 
 
-.answer-content-1, .answer-content-2, .buttons {
+.answer-content, .buttons {
     flex: 1;
     padding-left: 10px;
     margin: 15px 0px;
@@ -109,11 +109,11 @@ html {
     -o-border-radius: 10px;
 }
 
-.cont-answer-1:hover, .cont-answer-2:hover {
+.cont-answer:hover{
     background-color: #2225;
 }
 
-.cont-answer-1:active, .cont-answer-2:active {
+.cont-answer:active {
     background-color: #2223;
 }
 
@@ -186,7 +186,7 @@ html {
 }
 
 @media screen and (max-width:580px) {
-    .cont-answer-1, .cont-answer-2 {
+    .cont-answer {
         padding-left: 20px;
     }
 
