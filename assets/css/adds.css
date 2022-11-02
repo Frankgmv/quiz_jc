@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;1,100&display=swap');
 
-html {
-    font-size: 17px;
-}
 
 * {
     margin: 0;
@@ -11,8 +8,22 @@ html {
     box-sizing: border-box;
 }
 
-::root {
+:root {
     --verde-main: #3c79;
+    --verde-mot1: #3c7;
     --verde-btn-normal: #2a7;
     --verde-btn-active: #2f8;
+    --verde-btn-active-opacity: #2f89;
+    
+    --verde-btn-especial1: #1c7;
+    --verde-btn-especial2: #6c5;
+    
+    --blanco-main : #fff;
+    --blanco_second:#fff9;
+
+    --font-black-main: #5559;
+
+    --incorrecto: #f008;
+    --correcto:#70ff8bcc;
+
 }

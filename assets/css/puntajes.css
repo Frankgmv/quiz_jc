@@ -1,3 +1,5 @@
+@import "./adds.css";
+
 .container-principal-puntaje {
     display: flex;
     justify-content: center;
@@ -7,7 +9,7 @@
 }
 
 .container-general-puntaje {
-    border: 5px solid #3c79;
+    border: 5px solid var(--verde-btn-normal);
     background-color: #1119;
     width: 400px;
     border-radius: 15px;
@@ -20,8 +22,8 @@
 .title-text {
     text-align: center;
     text-transform: capitalize;
-    background: linear-gradient(to bottom, #3c78, #3c78);
-    border-bottom: 2px solid #3c78;
+    background: linear-gradient(to bottom, var(--verde-btn-normal), var(--verde-btn-especial1));
+    border-bottom: 2px solid var(--verde-btn-normal);
 
 }
 
@@ -39,13 +41,13 @@
     justify-content: end;
     align-items: center;
     flex-direction: column;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .img-content {
     width: 100%;
     display: flex;
-    color: yellow;
+    color: #ff0;
 }
 
 .img-content i {
@@ -79,14 +81,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top, #2c78, #3c78);
-    border-top: 2px solid #3c78;
+    background: linear-gradient(to top, var(--verde-mot1),  var(--verde-btn-normal));
+    border-top: 2px solid var(--verde-main);
     height: 50px;
 }
 
 .complemento {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .complemento:hover {
@@ -105,12 +107,12 @@
 
 .ptj, .puntos {
     font-size: 1.2em;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .ptj:hover, .puntos:hover {
     font-size: 1.21em;
-    color: #1f9;
+    color: var(--verde-btn-especial1);
 }
 
 

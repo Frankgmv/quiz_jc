@@ -1,3 +1,4 @@
+@import "./adds.css";
 html {
     font-size: 15px;
 }
@@ -24,7 +25,7 @@ html {
     padding: 20px;
     display: flex;
     flex-wrap: nowrap;
-    outline: 6px solid #3c79;
+    outline: 6px solid var(--verde-main);
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -48,7 +49,7 @@ html {
     align-self: flex-start;
     padding: 3px;
     margin-right: 27px;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .container-questions {
@@ -66,7 +67,7 @@ html {
     width: 90%;
     margin-bottom: 20px;
     padding-left: 50px;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .question:hover, .container-number:hover{
@@ -92,7 +93,7 @@ html {
 .answer-index-1, .answer-index-2 {
     width: 40px;
     margin: 15px 0px;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 
@@ -100,7 +101,7 @@ html {
     flex: 1;
     padding-left: 10px;
     margin: 15px 0px;
-    color: #fff;
+    color: var(--blanco-main);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -128,8 +129,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: #2c7;
+    color: var(--blanco-main);
+    background-color: var(--verde-btn-normal);
     text-decoration: none;
     height: 40px;
     width: 100px;
@@ -141,10 +142,10 @@ html {
 }
 
 .buttons a:hover, a:active {
-    background: linear-gradient(to bottom ,#1c7, #6c5);
+    background: linear-gradient(to bottom , var(--verde-btn-especial1) , var(--verde-btn-especial2));
     height: 41px;
     width: 101px;
-    outline: 2px solid #fff9;
+    outline: 2px solid var(--blanco-second);
     transition: all .2s border .1s;
     -webkit-transition: all .2s border .1s;
     -moz-transition: all .2s border .1s;
@@ -201,15 +202,15 @@ html {
 
 .seleccionado {
     background-color: #2229;
-    border: 1px solid #fff;
-    box-shadow: 0px 3px 10px #fff;
+    border: 1px solid var(--blanco-main);
+    box-shadow: 0px 3px 10px var(--blanco-main);
 }
 
 .correcto {
-    background-color: #70ff8bcc;
+    background-color: var(--correcto);
 }
 
 
 .incorrecto {
-    background-color: #f008;
+    background-color: var(--incorrecto);
 }

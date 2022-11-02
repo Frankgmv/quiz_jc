@@ -1,7 +1,9 @@
+@import "./adds.css";
+
 footer {
     width: 100%;
     height: 130px;
-    background: linear-gradient(to right, #3c79 30%, #fff9);
+    background: linear-gradient(to right, var(--verde-main) 30%, var(--blanco_second));
     display: flex;
     justify-content: start;
     align-items: center;
@@ -44,7 +46,7 @@ footer {
 
 .link-item-footer a:hover {
     font-weight: 600;
-    color: #fff;
+    color: var(--blanco-main);
     text-shadow: 4px 4px 3px #222;
 }
 

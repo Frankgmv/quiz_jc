@@ -7,8 +7,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px 35px;
-    background-color: #5559;
-    border: 6px outset #3c79;
+    background-color: var(--font-black-main);
+    border: 6px outset var(--verde-main);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -30,7 +30,7 @@
 .title-base {
     font-family: 'Mitr';
     text-align: center;
-    color: #fff;
+    color: var(--blanco-main);
     font-size: 1.9em;
     margin: 10px 0px;
 }
@@ -40,14 +40,14 @@
     text-align: justify;
     line-height: 1.5;
     font-family: 'Poppins';
-    color: #fff;
+    color: var(--blanco-main);
     font-weight: 500;
 }
 
 .text-base::first-letter {
     font-size: 1.1em;
     font-weight: 600;
-    color: #fff;
+    color: var(--blanco-main);
 }
 
 .input-contain, .text-container {
@@ -69,15 +69,15 @@
 .input-data {
     background-color: transparent;
     text-align: center;
-    border-bottom: 2px inset #2a7;
-    color: #ffffff;
+    border-bottom: 2px inset var(--verde-btn-normal);
+    color: var(--blanco-main);
     font-size: 1.2em;
 }
 
 .input-data:focus {
     font-size: 1.3em;
     background-color: #7775;
-    border-color: #2f8;
+    border-color: var(--verde-btn-active);
     transition: all .1s;
     -webkit-transition: all .1s;
     -moz-transition: all .1s;
@@ -86,25 +86,25 @@
 }
 
 .input-data::placeholder {
-    color: #fff;
+    color: var(--blanco-main);
     letter-spacing: 1.2px;
 
 }
 
 .btn-submit {
-    background-color: #2a7;
-    color: #fff;
+    background-color: var(--verde-btn-normal);
+    color: var(--blanco-main);
 }
 
 .btn-submit:hover {
-    background-color: #2a7;
-    color: #fff9;
+    background-color: var(--verde-btn-normal);
+    color: var(--blanco-second);
 
 }
 
 .btn-submit:active {
-    background-color: #2f89;
-    color: #fff;
+    background-color: var(--verde-btn-active-opacity);
+    color: var(--blanco-main);
 }
 
 .img-container {
@@ -120,7 +120,7 @@
     width: 90%;
     border: 1px solid black;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--blanco-main);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
