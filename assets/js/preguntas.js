@@ -1,3 +1,5 @@
+window.addEventListener('load', startAll);
+
 
 const Preguntas = [
     { Pregunta: '¿Cuál es el plato típico paisa?', 'respuesta_1': 'Bandeja paisa', "respuesta_2": 'Arroz paisa', 'correcta': 1 },
@@ -19,7 +21,6 @@ const Preguntas = [
     { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
 ]
 
-
 // Recolectar variables
 const id_ = document.querySelector("#index_pregunta");
 const pregunta = document.querySelector("#question");
@@ -30,32 +31,26 @@ const respuesta2 = document.querySelector("#answer2");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 
-console.log(cont_pregunta1);
-console.log(cont_pregunta2);
+cont = 0;
 
-// Variables necesaria
-respuesta_seleccionada;
-puntaje = 0;
-var cont = 0;
+function startAll() {
 
-
-// iteración de preguntas
-while (cont <= Preguntas.length) {
-    id_.innerHTML = cont;
+    cont_pregunta1.addEventListener('click', agregar_clase1);
+    cont_pregunta2.addEventListener('click', agregar_clase2);
+    
+    // iteración de preguntas
+    id_.innerHTML = cont + 1;
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
 
-    // Eventos
-    cont_pregunta1.addEventListener('click', agregar_clase1)
-    cont_pregunta2.addEventListener('click', agregar_clase2)
     boton.addEventListener('click', Evaluar_respuesta);
 }
-// } while (cont <= Preguntas.length);
 
 
 // Funciones de eventos
 function agregar_clase1() {
+
     cont_pregunta1.classList.add("seleccionado");
     cont_pregunta2.classList.remove("seleccionado");
     respuesta_seleccionada = 1;
@@ -67,36 +62,11 @@ function agregar_clase2() {
     respuesta_seleccionada = 2;
 }
 
-function esCorrecta(resp) {
-    let correcta;
-    resp == Preguntas[cont].correcta ? correcta = true : correcta = true;
-    return correcta;
-}
+AumentarCont = cont => cont++;
 
-function Evaluar_respuesta() {
-    let esCorrecta;
+function Evaluar_respuesta(e) { 
+    e.preventDefault();
 
-    if (esCorrecta(respuesta_seleccionada)) {
-        puntaje += 10;
-        esCorrecta = true;
-    } else {
-        puntaje -= 10;
-        esCorrecta = false;
-    }
-    marcar_respuesta(respuesta_seleccionada);
+    cont = AumentarCont(cont);
 
-    cont++;
-}
-
-function marcar_respuesta(Num_respuesta, esCorrecta) {
-
-    setTimeout(() => {
-
-        if (Num_respuesta == 1) {
-
-        } else {
-
-        }
-
-    }, 2000);
 }
