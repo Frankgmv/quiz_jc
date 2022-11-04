@@ -31,7 +31,8 @@ const respuesta2 = document.querySelector("#answer2");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 
-cont = 0;
+var cont = 0;
+localStorage.setItem("cont", cont.toString);
 
 function startAll() {
 
@@ -45,12 +46,11 @@ function startAll() {
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
 
     boton.addEventListener('click', Evaluar_respuesta);
-}
+}   
 
 
 // Funciones de eventos
 function agregar_clase1() {
-
     cont_pregunta1.classList.add("seleccionado");
     cont_pregunta2.classList.remove("seleccionado");
     respuesta_seleccionada = 1;
@@ -66,7 +66,13 @@ AumentarCont = cont => cont++;
 
 function Evaluar_respuesta(e) { 
     e.preventDefault();
+    console.log(cont++);
 
-    cont = AumentarCont(cont);
+    let num = JSON.parse(localStorage.getItem('cont'));
+    console.log(num);
+
+
+    // cont = AumentarCont(cont);
+    // cont++;
 
 }
