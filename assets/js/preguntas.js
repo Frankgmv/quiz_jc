@@ -72,17 +72,6 @@ function Evaluar_respuesta() {
     cont++;
 }
 
-function marcar_respuesta(Num_respuesta, esCorrecta) {
-
-    setTimeout(() => {
-
-        if (Num_respuesta == 1) {
-
-        }
-
-    }, 3000);
-}
-
 
 
 
