@@ -1,6 +1,5 @@
 window.addEventListener('load', startAll);
 
-
 const Preguntas = [
     { Pregunta: '¿Cuál es el plato típico paisa?', 'respuesta_1': 'Bandeja paisa', "respuesta_2": 'Arroz paisa', 'correcta': 1 },
     { Pregunta: '¿Cuál es la capital paisa?', 'respuesta_1': 'Medellín', "respuesta_2": 'Antioquia', 'correcta': 1 },
@@ -21,34 +20,34 @@ const Preguntas = [
     { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
 ]
 
+
 // Recolectar variables
 const id_ = document.querySelector("#index_pregunta");
 const pregunta = document.querySelector("#question");
 const boton = document.querySelector("#boton_submit");
 const respuesta1 = document.querySelector("#answer1");
 const respuesta2 = document.querySelector("#answer2");
-
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 
-var cont = [0];
-
+var cont = [0]; 
 localStorage.setItem("cont", cont);
 
 function startAll() {
 
     cont_pregunta1.addEventListener('click', agregar_clase1);
     cont_pregunta2.addEventListener('click', agregar_clase2);
-    
+    boton.addEventListener('click', Evaluar_respuesta);
+}
+
+
+function cambiar_pregunta (cont){
     // iteración de preguntas
     id_.innerHTML = cont + 1;
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
-
-    boton.addEventListener('click', Evaluar_respuesta);
-}   
-
+}
 
 // Funciones de eventos
 function agregar_clase1() {
@@ -63,17 +62,14 @@ function agregar_clase2() {
     respuesta_seleccionada = 2;
 }
 
-AumentarCont = cont => cont++;
-
-function Evaluar_respuesta(e) { 
+function Evaluar_respuesta(e) {
     e.preventDefault();
-
     let num = JSON.parse(localStorage.getItem('cont'));
-    console.log(typeof(num));
+    cambiar_pregunta(num);
+    num++;
+    localStorage.setItem('cont', num);
 
+    console.log(num);
 
-
-    // cont = AumentarCont(cont);
-    // cont++;
-
+    console.log(localStorage.getItem("cont"));
 }
