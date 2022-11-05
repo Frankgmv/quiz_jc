@@ -31,8 +31,9 @@ const respuesta2 = document.querySelector("#answer2");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 
-var cont = 0;
-localStorage.setItem("cont", cont.toString);
+var cont = [0];
+
+localStorage.setItem("cont", cont);
 
 function startAll() {
 
@@ -66,10 +67,10 @@ AumentarCont = cont => cont++;
 
 function Evaluar_respuesta(e) { 
     e.preventDefault();
-    console.log(cont++);
 
     let num = JSON.parse(localStorage.getItem('cont'));
-    console.log(num);
+    console.log(typeof(num));
+
 
 
     // cont = AumentarCont(cont);
