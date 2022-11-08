@@ -57,10 +57,15 @@ function agregar_clase2(e) {
 
 esCorrecta = (n_ask, id_preg) => {
     let answer;
+    // TODO borrar comentarios innecesarios
+    // console.log(`Resultado: ${Preguntas[id_preg].correcta} || ${n_ask}`);
+
     if (n_ask == Preguntas[id_preg].correcta) {
         answer = true;
+        // console.log("Verdadero");
     } else {
         answer = false;
+        // console.log("falso");
     }
     // MarcarRespuesta(answer, id_resp)
     return answer;
@@ -69,20 +74,17 @@ esCorrecta = (n_ask, id_preg) => {
 function cambiar_pregunta(cont) {
     // iteración de preguntas
     id_.innerHTML = cont + 1;
+    id_.innerHTML = cont + 1;
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
-    respuesta2.innerHTML = Preguntas[cont].respuesta_2;
-
-
-    if (cont == 16) {
+    if (cont >= 16) {
         boton.addEventListener('click', () => {
             setTimeout(() => {
                 window.location = "../Views/puntaje.html";
-            }, 2000);
-        })
+            }, 800);
+        });
     }
 }
-
 
 // function MarcarRespuesta(val, id) {
 
