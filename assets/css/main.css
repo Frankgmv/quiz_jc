@@ -74,7 +74,7 @@ html {
     text-shadow: 2px 2px 4px black;
 }
 
-.cont-answer-1, .cont-answer-2, .buttons {
+.cont-answer, .buttons {
     font-size: 1.4rem;
     display: inline-block;
     padding-left: 80px;
@@ -90,14 +90,14 @@ html {
     -o-border-radius: 10px;
 }
 
-.answer-index-1, .answer-index-2 {
+.answer-index {
     width: 40px;
     margin: 15px 0px;
     color: var(--blanco-main);
 }
 
 
-.answer-content-1, .answer-content-2, .buttons {
+.answer-content, .buttons {
     flex: 1;
     padding-left: 10px;
     margin: 15px 0px;
@@ -109,11 +109,11 @@ html {
     -o-border-radius: 10px;
 }
 
-.cont-answer-1:hover, .cont-answer-2:hover {
+.cont-answer:hover{
     background-color: #2225;
 }
 
-.cont-answer-1:active, .cont-answer-2:active {
+.cont-answer:active {
     background-color: #2223;
 }
 
@@ -141,11 +141,22 @@ html {
     -o-border-radius: 10px;
 }
 
-.buttons a:hover, a:active {
+.buttons a:hover {
     background: linear-gradient(to bottom , var(--verde-btn-especial1) , var(--verde-btn-especial2));
     height: 41px;
     width: 101px;
-    outline: 2px solid var(--blanco-second);
+    outline: 2px solid var(--blanco-main);
+    transition: all .2s border .1s;
+    -webkit-transition: all .2s border .1s;
+    -moz-transition: all .2s border .1s;
+    -ms-transition: all .2s border .1s;
+    -o-transition: all .2s border .1s;
+}
+.buttons a:active {
+    background: linear-gradient(to bottom , var(--verde-btn-normal) , var(--correcto));
+    height: 41px;
+    width: 101px;
+    outline: 3px solid var(--blanco-second);
     transition: all .2s border .1s;
     -webkit-transition: all .2s border .1s;
     -moz-transition: all .2s border .1s;
@@ -186,7 +197,7 @@ html {
 }
 
 @media screen and (max-width:580px) {
-    .cont-answer-1, .cont-answer-2 {
+    .cont-answer {
         padding-left: 20px;
     }
 

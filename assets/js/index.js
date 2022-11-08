@@ -8,6 +8,10 @@ Boton.addEventListener('click', () => {
     } else {
         let NombreUser = Nombre.value;
         localStorage.setItem("NombreUsuario", NombreUser);
+        var cont = [0];
+        var puntaje = [0];
+        localStorage.setItem("cont", cont);
+        localStorage.setItem("puntaje", puntaje);
         window.location = "./views/preguntas.html";
     }
 });

@@ -1,3 +1,4 @@
+window.addEventListener('load', startAll);
 
 const Preguntas = [
     { Pregunta: '¿Cuál es el plato típico paisa?', 'respuesta_1': 'Bandeja paisa', "respuesta_2": 'Arroz paisa', 'correcta': 1 },
@@ -18,62 +19,61 @@ const Preguntas = [
     { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solterias', "respuesta_2": 'Los caramelos', 'correcta': 1 },
     { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
 ]
+    
 
-
+// Recolectar variables
 const id_ = document.querySelector("#index_pregunta");
 const pregunta = document.querySelector("#question");
 const boton = document.querySelector("#boton_submit");
 const respuesta1 = document.querySelector("#answer1");
 const respuesta2 = document.querySelector("#answer2");
+const cont_pregunta1 = document.querySelector("#cont1");
+const cont_pregunta2 = document.querySelector("#cont2");
 
-const cont_pregunta1 = document.querySelector(".cont-answer-1");
-const cont_pregunta2 = document.querySelector(".cont-answer-2");
+function startAll() {
 
-cont_pregunta1.addEventListener('click', agregar_clase1)
-cont_pregunta2.addEventListener('click', agregar_clase2)
+    cont_pregunta1.addEventListener('click', agregar_clase1);
+    cont_pregunta2.addEventListener('click', agregar_clase2);
 
-respuesta_seleccionada;
-puntaje = 0;
-var cont = 0;
+    boton.addEventListener('click', Evaluar_respuesta);
+}
 
-do {
-    id_.innerHTML = cont;
+function cambiar_pregunta (cont){
+    // iteración de preguntas
+    id_.innerHTML = cont + 1;
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
+}
 
-    boton.addEventListener('click', Evaluar_respuesta);
-
-} while (cont <= Preguntas.length);
-
-
+// Funciones de eventos
 function agregar_clase1() {
     cont_pregunta1.classList.add("seleccionado");
     cont_pregunta2.classList.remove("seleccionado");
     respuesta_seleccionada = 1;
 }
+
 function agregar_clase2() {
     cont_pregunta1.classList.remove("seleccionado");
     cont_pregunta2.classList.add("seleccionado");
     respuesta_seleccionada = 2;
 }
 
-function Evaluar_respuesta() {
+function Evaluar_respuesta(e) {
+    e.preventDefault();
+    let num = JSON.parse(localStorage.getItem('cont'));
 
-    if (Preguntas.correcta == respuesta_seleccionada) {
-        puntaje += 10;
-        let correcta = true;
-    } else {
-        puntaje -= 10;
-        let correcta = false;
-    }
-    marcar_respuesta(respuesta_seleccionada, correcta);
-
-    cont++;
+    cambiar_pregunta(num);
+    
+    num++;
+    localStorage.setItem('cont', num);
 }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> iterador
