@@ -19,7 +19,7 @@ const Preguntas = [
     { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solterias', "respuesta_2": 'Los caramelos', 'correcta': 1 },
     { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
 ]
-
+    
 
 // Recolectar variables
 const id_ = document.querySelector("#index_pregunta");
@@ -30,16 +30,13 @@ const respuesta2 = document.querySelector("#answer2");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 
-var cont = [0]; 
-localStorage.setItem("cont", cont);
-
 function startAll() {
 
     cont_pregunta1.addEventListener('click', agregar_clase1);
     cont_pregunta2.addEventListener('click', agregar_clase2);
+
     boton.addEventListener('click', Evaluar_respuesta);
 }
-
 
 function cambiar_pregunta (cont){
     // iteración de preguntas
@@ -65,11 +62,9 @@ function agregar_clase2() {
 function Evaluar_respuesta(e) {
     e.preventDefault();
     let num = JSON.parse(localStorage.getItem('cont'));
+
     cambiar_pregunta(num);
+    
     num++;
     localStorage.setItem('cont', num);
-
-    console.log(num);
-
-    console.log(localStorage.getItem("cont"));
 }
