@@ -68,12 +68,3 @@ function Evaluar_respuesta(e) {
     num++;
     localStorage.setItem('cont', num);
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> iterador
