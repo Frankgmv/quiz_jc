@@ -55,16 +55,16 @@ function agregar_clase2(e) {
     respuesta_seleccionada = 2;
 }
 
-// esCorrecta = (n_ask, id_preg, id_resp) => {
-//     let answer;
-//     if (n_ask == Preguntas[id_preg].correcta) {
-//         answer = true;
-//     } else {
-//         answer = false;
-//     }
-//     MarcarRespuesta(answer, id_resp)
-//     return answer;
-// }
+esCorrecta = (n_ask, id_preg) => {
+    let answer;
+    if (n_ask == Preguntas[id_preg].correcta) {
+        answer = true;
+    } else {
+        answer = false;
+    }
+    // MarcarRespuesta(answer, id_resp)
+    return answer;
+}
 
 function cambiar_pregunta(cont) {
     // iteración de preguntas
@@ -72,6 +72,15 @@ function cambiar_pregunta(cont) {
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
+
+
+    if (cont == 16) {
+        boton.addEventListener('click', () => {
+            setTimeout(() => {
+                window.location = "../Views/puntaje.html";
+            }, 2000);
+        })
+    }
 }
 
 
@@ -99,9 +108,10 @@ function Evaluar_respuesta(e) {
 
 
     if (respuesta_seleccionada != 0) {
-        
-        let num = JSON.parse(localStorage.getItem('cont'));
+
         let puntos = JSON.parse(localStorage.getItem('puntaje'));
+        let num = JSON.parse(localStorage.getItem('cont'));
+
         if (esCorrecta(respuesta_seleccionada, num)) {
             puntos += 10;
         } else {
@@ -111,19 +121,17 @@ function Evaluar_respuesta(e) {
 
         boton.innerHTML = localStorage.getItem('puntaje');
 
-        cambiar_pregunta(num);
         num++;
-        localStorage.setItem('cont', num, respuesta_seleccionada);
-
-        // Limpiar_pantalla();
-
+        cambiar_pregunta(num);
+        localStorage.setItem('cont', num);
+        Limpiar_pantalla();
     } else {
         alert('Selecciona una respuesta');
     }
 }
 
-// function Limpiar_pantalla() {
-//     cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto");
-//     cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto");
-//     respuesta_seleccionada = 0;
-// }
+function Limpiar_pantalla() {
+    cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto");
+    cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto");
+    respuesta_seleccionada = 0;
+}
