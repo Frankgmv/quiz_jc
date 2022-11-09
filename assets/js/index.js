@@ -7,7 +7,9 @@ Boton.addEventListener('click', () => {
         Nombre.focus();
     } else {
         let NombreUser = Nombre.value;
+        let correctas = [0];
         localStorage.setItem("NombreUsuario", NombreUser);
+        localStorage.setItem("correctas", correctas);
         var cont = [0];
         var puntaje = [0];
         localStorage.setItem("cont", cont);

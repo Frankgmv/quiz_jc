@@ -62,10 +62,11 @@ esCorrecta = (n_ask, id_preg) => {
 
     if (n_ask == Preguntas[id_preg].correcta) {
         answer = true;
-        // console.log("Verdadero");
+        let correctas = JSON.parse(localStorage.getItem('correctas'));
+        correctas++;
+        localStorage.setItem('correctas', correctas);
     } else {
         answer = false;
-        // console.log("falso");
     }
     // MarcarRespuesta(answer, id_resp)
     return answer;
@@ -77,11 +78,13 @@ function cambiar_pregunta(cont) {
     id_.innerHTML = cont + 1;
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
+    respuesta2.innerHTML = Preguntas[cont].respuesta_2;
+
     if (cont >= 16) {
         boton.addEventListener('click', () => {
             setTimeout(() => {
                 window.location = "../Views/puntaje.html";
-            }, 800);
+            }, 1000);
         });
     }
 }
@@ -119,6 +122,7 @@ function Evaluar_respuesta(e) {
         } else {
             puntos -= 5;
         }
+        
         localStorage.setItem('puntaje', puntos);
 
         boton.innerHTML = localStorage.getItem('puntaje');
@@ -128,7 +132,7 @@ function Evaluar_respuesta(e) {
         localStorage.setItem('cont', num);
         Limpiar_pantalla();
     } else {
-        alert('Selecciona una respuesta');
+        swal("Selecciona una respuesta",'','warning');
     }
 }
 
