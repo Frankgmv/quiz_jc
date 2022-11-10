@@ -20,6 +20,8 @@ const Preguntas = [
     { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solterias', "respuesta_2": 'Los caramelos', 'correcta': 1 },
     { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
 ]
+let total_preguntas = [Preguntas.length];
+localStorage.setItem("total_preguntas", total_preguntas);
 
 // Recolectar variables
 const id_ = document.querySelector("#index_pregunta");
@@ -122,7 +124,7 @@ function Evaluar_respuesta(e) {
         } else {
             puntos -= 5;
         }
-        
+
         localStorage.setItem('puntaje', puntos);
 
         boton.innerHTML = localStorage.getItem('puntaje');
@@ -132,7 +134,7 @@ function Evaluar_respuesta(e) {
         localStorage.setItem('cont', num);
         Limpiar_pantalla();
     } else {
-        swal("Selecciona una respuesta",'','warning');
+        swal("Selecciona una respuesta", '', 'warning');
     }
 }
 
