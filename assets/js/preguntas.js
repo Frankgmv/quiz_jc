@@ -57,23 +57,6 @@ function agregar_clase2(e) {
     respuesta_seleccionada = 2;
 }
 
-esCorrecta = (n_ask, id_preg) => {
-    let answer;
-    // TODO borrar comentarios innecesarios
-    // console.log(`Resultado: ${Preguntas[id_preg].correcta} || ${n_ask}`);
-
-    if (n_ask == Preguntas[id_preg].correcta) {
-        answer = true;
-        let correctas = JSON.parse(localStorage.getItem('correctas'));
-        correctas++;
-        localStorage.setItem('correctas', correctas);
-    } else {
-        answer = false;
-    }
-    // MarcarRespuesta(answer, id_resp)
-    return answer;
-}
-
 function cambiar_pregunta(cont) {
     // iteración de preguntas
     id_.innerHTML = cont + 1;
@@ -91,48 +74,65 @@ function cambiar_pregunta(cont) {
     }
 }
 
-// function MarcarRespuesta(val, id) {
+esCorrecta = (n_ask, id_preg, id_resp) => {
+    let answer;
+    // TODO borrar comentarios innecesarios
+    // console.log(`Resultado: ${Preguntas[id_preg].correcta} || ${n_ask}`);
 
-//     if (val) {
-//         if (id == 1) {
-//             cont_pregunta1.classList.add("correcto");
-//             cont_pregunta2.classList.remove("correcto");
-//         } else {
-//             cont_pregunta1.classList.remove("correcto");
-//             cont_pregunta2.classList.add("correcto");
-//         }
-//     } else {
-//         if (id == 1) {
-//             cont_pregunta1.classList.add("incorrecto");
-//         } else {
-//             cont_pregunta2.classList.add("incorrecto");
-//         }
-//     }
-// }
+    if (n_ask == Preguntas[id_preg].correcta) {
+        answer = true;
+        let correctas = JSON.parse(localStorage.getItem('correctas'));
+        correctas++;
+        localStorage.setItem('correctas', correctas);
+    } else {
+        answer = false;
+    }
+    MarcarRespuesta(answer, id_resp)
+    return answer;
+}
+
+function MarcarRespuesta(val, id) {
+
+    if (val) {
+
+        if (id == 1) {
+            cont_pregunta1.classList.add("correcto");
+            cont_pregunta2.classList.remove("correcto");
+        } else {
+            cont_pregunta1.classList.remove("correcto");
+            cont_pregunta2.classList.add("correcto");
+        }
+    } else {
+        if (id == 1) {
+            cont_pregunta1.classList.add("incorrecto");
+        } else {
+            cont_pregunta2.classList.add("incorrecto");
+        }
+    }
+}
 
 function Evaluar_respuesta(e) {
     e.preventDefault();
-
 
     if (respuesta_seleccionada != 0) {
 
         let puntos = JSON.parse(localStorage.getItem('puntaje'));
         let num = JSON.parse(localStorage.getItem('cont'));
 
-        if (esCorrecta(respuesta_seleccionada, num)) {
+        if (esCorrecta(respuesta_seleccionada, num, respuesta_seleccionada)) {
             puntos += 10;
         } else {
             puntos -= 5;
         }
-
         localStorage.setItem('puntaje', puntos);
 
-        boton.innerHTML = localStorage.getItem('puntaje');
-
-        num++;
-        cambiar_pregunta(num);
-        localStorage.setItem('cont', num);
-        Limpiar_pantalla();
+        setTimeout(() => {
+            num++;
+            cambiar_pregunta(num);
+            localStorage.setItem('cont', num);
+            
+            Limpiar_pantalla();
+        }, 2000);
     } else {
         swal("Selecciona una respuesta", '', 'warning');
     }

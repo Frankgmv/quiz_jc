@@ -219,9 +219,21 @@ html {
 
 .correcto {
     background-color: var(--correcto);
+    border-color: var(--verde-main);
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
 }
 
 
 .incorrecto {
     background-color: var(--incorrecto);
+    border-color: var(--border-incorrecto);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
