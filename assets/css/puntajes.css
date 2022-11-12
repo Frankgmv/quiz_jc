@@ -1,4 +1,7 @@
-@import "./adds.css";
+.link-inicio{
+    text-decoration: none;
+    color: var(--font-black-normal);
+}
 
 .container-principal-puntaje {
     display: flex;
@@ -20,12 +23,14 @@
 }
 
 .title-text {
+    font-size:2rem;
+    line-height: 1.4;
     text-align: center;
-    text-transform: capitalize;
     background: linear-gradient(to bottom, var(--verde-btn-normal), var(--verde-btn-especial1));
     border-bottom: 2px solid var(--verde-btn-normal);
 
 }
+
 
 .title-puntaje {
     color: #fff;
@@ -56,6 +61,7 @@
 }
 
 .img-content i:hover {
+    color: var(--color-emoji);
     font-size: 5.1em;
     rotate: -350deg;
     transition: all .4s, rotate 1s;
@@ -111,7 +117,6 @@
 }
 
 .ptj:hover, .puntos:hover {
-    font-size: 1.21em;
     color: var(--verde-btn-especial1);
 }
 

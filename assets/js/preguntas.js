@@ -7,18 +7,17 @@ const Preguntas = [
     { Pregunta: '¿Cuál es el principal evento de agosto para los paisas?', 'respuesta_1': 'la feria de flores', "respuesta_2": 'Desfile de carrozas', 'correcta': 1 },
     { Pregunta: '¿Cuál es un mito Antioqueño?', 'respuesta_1': 'La Catrina', "respuesta_2": 'El Sombrerón', 'correcta': 2 },
     { Pregunta: '¿Cuál es el artista paisa más reconocido mundialmente por su arte?', 'respuesta_1': 'Doris Salcedo', "respuesta_2": 'Fernando Botero', 'correcta': 2 },
-    { Pregunta: '¿Cuál el edificio más alto de la capital?', 'respuesta_1': 'El Coltejer', "respuesta_2": 'Torre Colpatria', 'correcta': 1 },
+    { Pregunta: '¿Cuál es el edificio más alto de la capital paisa?', 'respuesta_1': 'El Coltejer', "respuesta_2": 'Torre Colpatria', 'correcta': 1 },
     { Pregunta: '¿Cuál es la batalla musical típica del paisa?', 'respuesta_1': 'La trova', "respuesta_2": 'El vallenato', 'correcta': 1 },
-    { Pregunta: '¿Quien es al arriero?', 'respuesta_1': 'El que cobra la plata', "respuesta_2": 'El que arrea las mulas', 'correcta': 2 },
-    { Pregunta: '¿Qué usa el arriero encima?', 'respuesta_1': 'Poncho, sombrero y carriel', "respuesta_2": 'Sobrero, dulceabrigo y machete', 'correcta': 1 },
-    { Pregunta: '¿Cuál es el Clásico del futbol?', 'respuesta_1': 'Nacional vs Medellín', "respuesta_2": 'Medellín vs Rio Negro', 'correcta': 1 },
-    { Pregunta: '¿Sistema de transporte más importante de Medellín?', 'respuesta_1': 'Línea metro', "respuesta_2": 'Copetran SAS', 'correcta': 1 },
-    { Pregunta: 'Nombre del aeropuerto principal de los paisas?', 'respuesta_1': 'Olaya Herrera', "respuesta_2": 'José María Córdova', 'correcta': 2 },
-    { Pregunta: 'Plato típico de diciembre para los paisas?', 'respuesta_1': 'Buñuelo y natilla', "respuesta_2": 'Sancocho y asado', 'correcta': 1 },
-    { Pregunta: '¿Qué es un perico para los paisa?', 'respuesta_1': 'Un tinto', "respuesta_2": 'café con leche', 'correcta': 2 },
-    { Pregunta: 'Universidad pública de la capital', 'respuesta_1': 'UdeA', "respuesta_2": 'UdeM', 'correcta': 1 },
-    { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solterias', "respuesta_2": 'Los caramelos', 'correcta': 1 },
-    { Pregunta: 'Una economía principal de Antioquia es: ', 'respuesta_1': 'Comercio', "respuesta_2": 'Minería', 'correcta': 1 },
+    { Pregunta: '¿Quien hace el arriero?', 'respuesta_1': 'El que exporta comida', "respuesta_2": 'El que arrea las mulas', 'correcta': 2 },
+    { Pregunta: '¿Qué lleva el arriero puesto encima?', 'respuesta_1': 'Poncho, sombrero y carriel', "respuesta_2": 'Sobrero, dulceabrigo y machete', 'correcta': 1 },
+    { Pregunta: '¿Cuál es el Clásico del futbol paisa?', 'respuesta_1': 'Nacional vs Medellín', "respuesta_2": 'Medellín vs Rio Negro', 'correcta': 1 },
+    { Pregunta: 'Sistema de transporte más importante de Medellín', 'respuesta_1': 'Línea metro', "respuesta_2": 'Línea Copetran', 'correcta': 1 },
+    { Pregunta: 'seleccione el nombre del aeropuerto principal de los paisas', 'respuesta_1': 'Olaya Herrera', "respuesta_2": 'José María Córdova', 'correcta': 2 },
+    { Pregunta: '¿Cuál es el Plato típico de diciembre para los paisas?', 'respuesta_1': 'Buñuelo y natilla', "respuesta_2": 'Asado y Lechona', 'correcta': 1 },
+    { Pregunta: '¿Qué es un perico para el paisa?', 'respuesta_1': 'Un tinto', "respuesta_2": 'café con leche', 'correcta': 2 },
+    { Pregunta: 'Universidades pública de la capital', 'respuesta_1': 'UdeA', "respuesta_2": 'UdeM', 'correcta': 1 },
+    { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solterias', "respuesta_2": 'Los caramelos', 'correcta': 1 }
 ]
 let total_preguntas = [Preguntas.length];
 localStorage.setItem("total_preguntas", total_preguntas);
@@ -65,7 +64,7 @@ function cambiar_pregunta(cont) {
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
 
-    if (cont >= 16) {
+    if (cont >= 15) {
         boton.addEventListener('click', () => {
             setTimeout(() => {
                 window.location = "../Views/puntaje.html";
