@@ -155,8 +155,8 @@ html {
 }
 .buttons a:active {
     background: linear-gradient(to bottom , var(--verde-btn-normal) , var(--correcto));
-    height: 41px;
-    width: 101px;
+    height: 40px;
+    width: 100px;
     outline: 3px solid var(--blanco-second);
     transition: all .2s border .1s;
     -webkit-transition: all .2s border .1s;
@@ -164,7 +164,7 @@ html {
     -ms-transition: all .2s border .1s;
     -o-transition: all .2s border .1s;
 }
-
+    
 
 @media screen and (max-width:800px) {
     .container-general {
