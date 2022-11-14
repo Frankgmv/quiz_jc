@@ -18,7 +18,7 @@ Nombre.addEventListener('keypress', (e) => {
     let codeLetter = e.keyCode;
 
     if (codeLetter == 13 && Nombre.value.length > 0) {
-        window.location = "assets/views/preguntas.html";
+        window.location = "assets/Views/preguntas.html";
     }
 });
 
@@ -27,7 +27,7 @@ Boton.addEventListener('click', () => {
         Nombre.focus();
     } else {
         // window.location = "assets/views/preguntas.html";
-        location.href = "assets/views/preguntas.html";
+        location.href = "assets/Views/preguntas.html";
     }
 });
 
