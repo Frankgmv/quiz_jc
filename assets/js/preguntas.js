@@ -2,22 +2,118 @@ window.addEventListener('load', startAll);
 let init = JSON.parse(localStorage.getItem('cont'));
 
 const Preguntas = [
-    { Pregunta: '¿Cuál es el plato típico paisa?', 'respuesta_1': 'Bandeja paisa', "respuesta_2": 'Arroz paisa', 'respuesta_3': 'uno', 'correcta': 1 },
-    { Pregunta: '¿Cuál es la capital paisa?', 'respuesta_1': 'Medellín', "respuesta_2": 'Antioquia', 'respuesta_3': 'dos', 'correcta': 1 },
-    { Pregunta: '¿Cuál es el principal evento de agosto para los paisas?', 'respuesta_1': 'la feria de flores', "respuesta_2": 'Desfile de carrozas', 'respuesta_3': 'tres', 'correcta': 1 },
-    { Pregunta: '¿Cuál es un mito Antioqueño?', 'respuesta_1': 'La Catrina', "respuesta_2": 'El Sombrerón', 'respuesta_3': 'cuatro', 'correcta': 2 },
-    { Pregunta: '¿Cuál es el artista paisa más reconocido mundialmente por su arte?', 'respuesta_1': 'Doris Salcedo', "respuesta_2": 'Fernando Botero', 'respuesta_3': 'cinco', 'correcta': 2 },
-    { Pregunta: '¿Cuál es el edificio más alto de la capital paisa?', 'respuesta_1': 'El Coltejer', "respuesta_2": 'Torre Colpatria', 'respuesta_3': 'seis', 'correcta': 1 },
-    { Pregunta: '¿Cuál es la batalla musical típica del paisa?', 'respuesta_1': 'La trova', "respuesta_2": 'El vallenato', 'respuesta_3': 'siete', 'correcta': 1 },
-    { Pregunta: '¿Qué hace el arriero?', 'respuesta_1': 'El que exporta comida', "respuesta_2": 'El que arrea las mulas', 'respuesta_3': 'ocho', 'correcta': 2 },
-    { Pregunta: '¿Qué lleva el arriero puesto encima?', 'respuesta_1': 'Poncho, sombrero y carriel', "respuesta_2": 'Sobrero, dulceabrigo y machete', 'respuesta_3': 'nueve', 'correcta': 1 },
-    { Pregunta: '¿Cuál es el Clásico del futbol paisa?', 'respuesta_1': 'Nacional vs Medellín', "respuesta_2": 'Medellín vs Rio Negro', 'respuesta_3': 'diez', 'correcta': 1 },
-    { Pregunta: 'Sistema de transporte más importante de Medellín', 'respuesta_1': 'Línea metro', "respuesta_2": 'Línea Copetran', 'respuesta_3': 'once', 'correcta': 1 },
-    { Pregunta: 'seleccione el nombre del aeropuerto principal de los paisas', 'respuesta_1': 'Olaya Herrera', "respuesta_2": 'José María Córdova', 'respuesta_3': 'doce', 'correcta': 2 },
-    { Pregunta: '¿Cuál es el Plato típico de diciembre para los paisas?', 'respuesta_1': 'Buñuelo y natilla', "respuesta_2": 'Asado y Lechona', 'respuesta_3': 'trece', 'correcta': 1 },
-    { Pregunta: '¿Qué es un perico para el paisa?', 'respuesta_1': 'Un tinto', "respuesta_2": 'café con leche', 'respuesta_3': 'catorce', 'correcta': 2 },
-    { Pregunta: 'Universidades pública de la capital', 'respuesta_1': 'UdeA', "respuesta_2": 'UdeM', 'respuesta_3': 'quince', 'correcta': 1 },
-    { Pregunta: '¿Cuál es el dulce típico de los ancianos?', 'respuesta_1': 'Las solteritas', "respuesta_2": 'Los caramelos', 'respuesta_3': 'dieciséis', 'correcta': 1 }
+    {
+        Pregunta: '¿Cuál es el plato típico paisa?',
+        'respuesta_1': 'Rellena',
+        'respuesta_2': 'Bandeja paisa',
+        "respuesta_3": 'Arroz paisa',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Cuál es la capital paisa?',
+        'respuesta_1': 'Medellín',
+        "respuesta_2": 'Antioquia',
+        'respuesta_3': 'Rio Negro',
+        'correcta': 1
+    },
+    {
+        Pregunta: '¿Cuál es el principal evento de agosto para los paisas?',
+        'respuesta_1': 'La alborada',
+        "respuesta_2": 'Desfile de carrozas',
+        'respuesta_3': 'la feria de flores',
+        'correcta': 3
+    },
+    {
+        Pregunta: '¿Cuál es un mito Antioqueño?',
+        'respuesta_1': 'La llorona',
+        "respuesta_2": 'El Sombrerón',
+        'respuesta_3': 'La pata sola',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Cuál es el artista paisa más reconocido mundialmente por su arte?',
+        'respuesta_1': 'Doris Salcedo',
+        "respuesta_2": 'Fernando Botero',
+        'respuesta_3': 'Belisario Betancur',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Cuál es el edificio más alto de la capital paisa?',
+        'respuesta_1': 'Torre Coltejer',
+        "respuesta_2": 'Torre Colpatria',
+        'respuesta_3': 'Torre del Café',
+        'correcta': 1
+    },
+    {
+        Pregunta: '¿Cuál es la batalla musical típica del paisa?',
+        'respuesta_1': 'El Joropo',
+        "respuesta_2": 'El Vallenato',
+        'respuesta_3': 'La Trova',
+        'correcta': 3
+    },
+    {
+        Pregunta: '¿Qué hace el arriero?',
+        'respuesta_1': 'El que recolecta dinero',
+        "respuesta_2": 'El que trabaja con mulas',
+        'respuesta_3': 'EL que recolecta hormigas',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Qué lleva el arriero puesto encima?',
+        'respuesta_1': 'Poncho, sombrero y carriel',
+        "respuesta_2": 'Sobrero, dulceabrigo y machete',
+        'respuesta_3': 'Ruana, carriel y zurriago',
+        'correcta': 1
+    },
+    {
+        Pregunta: '¿Cuál es el Clásico del futbol paisa?',
+        "respuesta_1":  'Medellín vs Rio Negro',
+        'respuesta_2': 'Medellín vs Santa fé',
+        'respuesta_3': 'Nacional vs Medellín',
+        'correcta': 3
+    },
+    {
+        Pregunta: 'Sistema de transporte más importante de Medellín',
+        "respuesta_1": 'Línea Copetran',
+        'respuesta_2': 'Línea Circular',
+        'respuesta_3': 'Línea metro',
+        'correcta': 3
+    },
+    {
+        Pregunta: 'seleccione el nombre del aeropuerto principal de los paisas',
+        'respuesta_1': 'Olaya Herrera',
+        "respuesta_2": 'José María Córdova',
+        'respuesta_3': 'Alberto Jaramillo Sánchez',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Cuál es el Plato típico de diciembre para los paisas?',
+        "respuesta_1": 'Asado y Lechona',
+        'respuesta_2': 'Buñuelo y natilla',
+        'respuesta_3': 'Buñuelo y Lechona',
+        'correcta': 2
+    },
+    {
+        Pregunta: '¿Qué es un perico para el paisa?',
+        'respuesta_1': 'Un tinto',
+        "respuesta_2": 'café con leche',
+        'respuesta_3': 'Un polvo',
+        'correcta': 2
+    },
+    {
+        Pregunta: 'Universidades pública de la capital',
+        'respuesta_1': 'UdeA',
+        "respuesta_2": 'UdeM',
+        'respuesta_3': 'Uniminuto',
+        'correcta': 1
+    },
+    {
+        Pregunta: '¿Cuál es el dulce típico de los ancianos?',
+        "respuesta_1": 'Los caramelos',
+        'respuesta_2': 'Obleas',
+        'respuesta_3': 'Las solteritas',
+        'correcta': 3
+    }
 ]
 let total_preguntas = [Preguntas.length];
 localStorage.setItem("total_preguntas", total_preguntas);
@@ -89,9 +185,6 @@ function cambiar_pregunta(cont) {
 
 esCorrecta = (n_ask, id_preg) => {
     let answer;
-    // TODO borrar comentarios innecesarios
-    // console.log(`Resultado: ${Preguntas[id_preg].correcta} || ${n_ask}`);
-
     if (n_ask == Preguntas[id_preg].correcta) {
         answer = true;
         let correctas = JSON.parse(localStorage.getItem('correctas'));
