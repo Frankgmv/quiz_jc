@@ -26,7 +26,8 @@ Boton.addEventListener('click', () => {
     if (Nombre.value.length == 0) {
         Nombre.focus();
     } else {
-        window.location = "assets/views/preguntas.html";
+        // window.location = "assets/views/preguntas.html";
+        location.href = "assets/views/preguntas.html";
     }
 });
 

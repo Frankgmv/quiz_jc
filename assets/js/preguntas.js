@@ -177,7 +177,8 @@ function cambiar_pregunta(cont) {
         boton.innerHTML = "Enviar";
         boton.addEventListener('click', () => {
             setTimeout(() => {
-                window.location = "../Views/puntaje.html";
+                // window.location = "../Views/puntaje.html";
+                location.href = "../Views/puntaje.html";
             }, 1000);
         });
     }
