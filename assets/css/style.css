@@ -2,6 +2,10 @@
 
 /* Normalize */
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+/* variables */
+@import "./variables.css";
+
 /* style encabezado*/
 @import "./header.css";
 

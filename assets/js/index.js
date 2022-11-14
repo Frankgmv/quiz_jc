@@ -14,6 +14,6 @@ Boton.addEventListener('click', () => {
         var puntaje = [0];
         localStorage.setItem("cont", cont);
         localStorage.setItem("puntaje", puntaje);
-        window.location = "./views/preguntas.html";
+        window.location = "assets/views/preguntas.html";
     }
 });

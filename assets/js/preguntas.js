@@ -65,6 +65,7 @@ function cambiar_pregunta(cont) {
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
 
     if (cont >= 15) {
+        boton.innerHTML = "Enviar"; 
         boton.addEventListener('click', () => {
             setTimeout(() => {
                 window.location = "../Views/puntaje.html";

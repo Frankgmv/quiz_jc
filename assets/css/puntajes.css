@@ -28,9 +28,16 @@
     text-align: center;
     background: linear-gradient(to bottom, var(--verde-btn-normal), var(--verde-btn-especial1));
     border-bottom: 2px solid var(--verde-btn-normal);
-
 }
 
+.title-text:hover{
+    color: var(--title-hover);
+    transition: 1.2s;
+    -webkit-transition: 1.2s;
+    -moz-transition: 1.2s;
+    -ms-transition: 1.2s;
+    -o-transition: 1.2s;
+}
 
 .title-puntaje {
     color: #fff;
@@ -61,14 +68,14 @@
 }
 
 .img-content i:hover {
-    color: var(--color-emoji);
-    font-size: 5.1em;
-    rotate: -350deg;
-    transition: all .4s, rotate 1s;
-    -webkit-transition: all .4s, rotate 1s;
-    -moz-transition: all .4s, rotate 1s;
-    -ms-transition: all .4s, rotate 1s;
-    -o-transition: all .4s, rotate 1s;
+    /*color: var(--color-emoji-second);
+    */font-size: 5.1em;
+    rotate: -30deg;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
 }
 
 .resultado-preguntas {
@@ -114,10 +121,15 @@
 .ptj, .puntos {
     font-size: 1.2em;
     color: var(--blanco-main);
+    transition: color .4s;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -ms-transition: color .4s;
+    -o-transition: color .4s;
 }
 
 .ptj:hover, .puntos:hover {
-    color: var(--verde-btn-especial1);
+    color: var(--title-hover);
 }
 
 

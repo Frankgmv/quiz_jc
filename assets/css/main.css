@@ -1,4 +1,3 @@
-@import "./adds.css";
 html {
     font-size: 15px;
 }
@@ -72,6 +71,11 @@ html {
 
 .question:hover, .container-number:hover{
     text-shadow: 2px 2px 4px black;
+    transition: all .8s;
+    -webkit-transition: all .8s;
+    -moz-transition: all .8s;
+    -ms-transition: all .8s;
+    -o-transition: all .8s;
 }
 
 .cont-answer, .buttons {
@@ -143,9 +147,6 @@ html {
 
 .buttons a:hover {
     background: linear-gradient(to bottom , var(--verde-btn-especial1) , var(--verde-btn-especial2));
-    height: 41px;
-    width: 101px;
-    outline: 2px solid var(--blanco-main);
     transition: all .2s border .1s;
     -webkit-transition: all .2s border .1s;
     -moz-transition: all .2s border .1s;
@@ -213,8 +214,7 @@ html {
 
 .seleccionado {
     background-color: #2229;
-    border: 2px solid var(--blanco-main);
-    /* box-shadow: 2px 2px 12px var(--blanco-main); */
+    outline: .5px solid var(--blanco-main);
 }
 
 .correcto {
