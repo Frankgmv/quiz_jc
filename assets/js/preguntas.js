@@ -61,7 +61,7 @@ const Preguntas = [
     {
         Pregunta: '¿Qué lleva el arriero puesto encima?',
         'respuesta_1': 'Poncho, sombrero y carriel',
-        "respuesta_2": 'Sobrero, dulceabrigo y machete',
+        "respuesta_2": 'Sombrero, dulceabrigo y machete',
         'respuesta_3': 'Ruana, carriel y zurriago',
         'correcta': 1
     },
@@ -95,9 +95,9 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Qué es un perico para el paisa?',
-        'respuesta_1': 'Un tinto',
+        'respuesta_1': 'Un polvo',
         "respuesta_2": 'café con leche',
-        'respuesta_3': 'Un polvo',
+        'respuesta_3': 'Un loro',
         'correcta': 2
     },
     {
