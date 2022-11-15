@@ -136,8 +136,7 @@ html {
     color: var(--blanco-main);
     background-color: var(--verde-btn-normal);
     text-decoration: none;
-    height: 40px;
-    width: 100px;
+    padding: 7px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;

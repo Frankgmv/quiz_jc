@@ -66,7 +66,7 @@ const Preguntas = [
         'correcta': 1
     },
     {
-        Pregunta: '¿Cuál es el Clásico del futbol paisa?',
+        Pregunta: '¿Cuál es el clásico del futbol paisa?',
         "respuesta_1":  'Medellín vs Rio Negro',
         'respuesta_2': 'Medellín vs Santa fé',
         'respuesta_3': 'Nacional vs Medellín',
@@ -76,7 +76,7 @@ const Preguntas = [
         Pregunta: 'Sistema de transporte más importante de Medellín',
         "respuesta_1": 'Línea Copetran',
         'respuesta_2': 'Línea Circular',
-        'respuesta_3': 'Línea metro',
+        'respuesta_3': 'Línea Metro',
         'correcta': 3
     },
     {
@@ -101,11 +101,11 @@ const Preguntas = [
         'correcta': 2
     },
     {
-        Pregunta: 'Universidades pública de la capital',
-        'respuesta_1': 'UdeA',
+        Pregunta: 'Universidad pública de la capital',
+        'respuesta_1': 'Uniminuto',
         "respuesta_2": 'UdeM',
-        'respuesta_3': 'Uniminuto',
-        'correcta': 1
+        'respuesta_3': 'UdeA',
+        'correcta': 3
     },
     {
         Pregunta: '¿Cuál es el dulce típico de los ancianos?',
