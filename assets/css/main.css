@@ -124,6 +124,7 @@ html {
 .buttons {
     position: relative;
     padding-right: 3pc;
+    
 }
 
 .buttons a {
@@ -185,13 +186,7 @@ html {
     .buttons a {
         bottom: -16px;
         right: 2px;
-        height: 35px;
-        width: 80px;
-    }
-
-    .buttons a:hover {
-        height: 36px;
-        width: 81px;
+        padding: 4px 6px;
     }
 
 }
