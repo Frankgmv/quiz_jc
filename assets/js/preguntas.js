@@ -5,8 +5,8 @@ const Preguntas = [
     {
         Pregunta: '¿Cuál es el plato típico paisa?',
         'respuesta_1': 'Rellena',
-        'respuesta_2': 'Bandeja paisa',
-        "respuesta_3": 'Arroz paisa',
+        'respuesta_2': 'Bandeja',
+        "respuesta_3": 'Frijoles',
         'correcta': 2
     },
     {
@@ -25,10 +25,10 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Cuál es un mito Antioqueño?',
-        'respuesta_1': 'La llorona',
+        'respuesta_1': 'La Llorona',
         "respuesta_2": 'El Sombrerón',
-        'respuesta_3': 'La pata sola',
-        'correcta': 2
+        'respuesta_3': 'La PataSola',
+        'correcta': 3
     },
     {
         Pregunta: '¿Cuál es el artista paisa más reconocido mundialmente por su arte?',
@@ -39,10 +39,10 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Cuál es el edificio más alto de la capital paisa?',
-        'respuesta_1': 'Torre Coltejer',
-        "respuesta_2": 'Torre Colpatria',
-        'respuesta_3': 'Torre del Café',
-        'correcta': 1
+        "respuesta_1": 'Torre del Café',
+        'respuesta_2': 'Centro Coltejer',
+        'respuesta_3': 'Cámara de Comercio',
+        'correcta': 2
     },
     {
         Pregunta: '¿Cuál es la batalla musical típica del paisa?',
@@ -52,6 +52,13 @@ const Preguntas = [
         'correcta': 3
     },
     {
+        Pregunta: '¿Quién era Cosiaca?',
+        'respuesta_1': 'El creador de la cultura paisa',
+        "respuesta_2": 'El creador del himno del paisa',
+        'respuesta_3': 'El creador de muchos dichos paisas',
+        'correcta': 2
+    },
+    {
         Pregunta: '¿Qué hace el arriero?',
         'respuesta_1': 'El que recolecta dinero',
         "respuesta_2": 'El que trabaja con mulas',
@@ -59,15 +66,8 @@ const Preguntas = [
         'correcta': 2
     },
     {
-        Pregunta: '¿Qué lleva el arriero puesto encima?',
-        'respuesta_1': 'Poncho, sombrero y carriel',
-        "respuesta_2": 'Sombrero, dulceabrigo y machete',
-        'respuesta_3': 'Ruana, carriel y zurriago',
-        'correcta': 1
-    },
-    {
         Pregunta: '¿Cuál es el clásico del futbol paisa?',
-        "respuesta_1":  'Medellín vs Rio Negro',
+        "respuesta_1": 'Medellín vs Rio Negro',
         'respuesta_2': 'Medellín vs Santa fé',
         'respuesta_3': 'Nacional vs Medellín',
         'correcta': 3
@@ -128,6 +128,7 @@ const respuesta3 = document.querySelector("#answer3");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 const cont_pregunta3 = document.querySelector("#cont3");
+const enter_content = document.querySelector("#content-main");
 respuesta_seleccionada = 0;
 
 cambiar_pregunta(init);
@@ -138,7 +139,17 @@ function startAll(e) {
     cont_pregunta2.addEventListener('click', agregar_clase2);
     cont_pregunta3.addEventListener('click', agregar_clase3);
     boton.addEventListener('click', Evaluar_respuesta);
+    // enter_content.addEventListener("keypress", EnterEvaluador)
+
+    enter_content.addEventListener('keyPress', (event) => {
+        // let codeLetter = event.keyCode;
+        // console.log(codeLetter);
+        // if (codeLetter == 13 ) {
+        swal("Hola", codeLetter, "success");
+        // }   
+    })
 }
+
 
 // Funciones de eventos
 function agregar_clase1(e) {
@@ -147,6 +158,8 @@ function agregar_clase1(e) {
     cont_pregunta2.classList.remove("seleccionado");
     cont_pregunta3.classList.remove("seleccionado");
     respuesta_seleccionada = 1;
+
+
 }
 
 function agregar_clase2(e) {
@@ -229,7 +242,6 @@ function MarcarRespuesta(val, id) {
 
 function Evaluar_respuesta(e) {
     e.preventDefault();
-
     if (respuesta_seleccionada != 0) {
 
         let puntos = JSON.parse(localStorage.getItem('puntaje'));
@@ -248,9 +260,39 @@ function Evaluar_respuesta(e) {
             localStorage.setItem('cont', num);
 
             Limpiar_pantalla();
-        }, 2000);
+        }, 1200);
     } else {
         swal("Selecciona una respuesta", '', 'warning');
+    }
+}
+
+function EnterEvaluador(e) {
+    let tecla = e.keyCode;
+
+    if (tecla == 13) {
+        console.log(tecla);
+        // if (respuesta_seleccionada != 0) {
+
+        //     let puntos = JSON.parse(localStorage.getItem('puntaje'));
+        //     let num = JSON.parse(localStorage.getItem('cont'));
+
+        //     if (esCorrecta(respuesta_seleccionada, num)) {
+        //         puntos += 10;
+        //     } else {
+        //         puntos -= 5;
+        //     }
+        //     localStorage.setItem('puntaje', puntos);
+
+        //     setTimeout(() => {
+        //         num++;
+        //         cambiar_pregunta(num);
+        //         localStorage.setItem('cont', num);
+
+        //         Limpiar_pantalla();
+        //     }, 2000);
+        // } else {
+        //     swal("Selecciona una respuesta", '', 'warning');
+        // }
     }
 }
 

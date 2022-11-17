@@ -41,6 +41,6 @@ mostrar_puntaje.innerHTML = puntaje;
 mostrar_total_preguntas.innerHTML = total_preguntas;
 mostrar_total_correctas.innerHTML = preguntas_correctas;
 mostrar_afirmacion.innerHTML = afirmación[n_afirmacion];
-mostrar_nombre.innerHTML = `Resultados de ${Nombre}`;
+mostrar_nombre.innerHTML = 'Resultados de' + Nombre;
 
 console.log(`Preguntas erradas: ${P_erradas}`);

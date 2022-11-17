@@ -46,7 +46,12 @@
 .text-base::first-letter {
     font-size: 1.1em;
     font-weight: 600;
-    color: var(--blanco-main);
+    color: var(--blanco-second);
+}
+
+.text-mark{
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .input-contain, .text-container {
