@@ -1,7 +1,6 @@
 window.addEventListener('load', startAll);
 let init = JSON.parse(localStorage.getItem('cont'));
 
-
 const Preguntas = [
     {
         Pregunta: '¿Cuál es el plato típico paisa?',

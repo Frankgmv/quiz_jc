@@ -12,11 +12,11 @@
 /* style footer*/
 @import "./footer.css";
 /* style contenido principal del log in*/
-@import "./content-login.css";
+
+@import "./inicio.css";
 
 /* style página principal de preguntas */
 @import "./main.css";
 
 /* Style page puntaje */
-
 @import "./puntajes.css";
