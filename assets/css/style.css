@@ -1,0 +1,22 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+/* Normalize */
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+/* variables */
+@import "./variables.css";
+
+/* style encabezado*/
+@import "./header.css";
+
+/* style footer*/
+@import "./footer.css";
+/* style contenido principal del log in*/
+@import "./content-login.css";
+
+/* style página principal de preguntas */
+@import "./main.css";
+
+/* Style page puntaje */
+
+@import "./puntajes.css";
