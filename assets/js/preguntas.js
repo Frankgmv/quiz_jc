@@ -1,12 +1,13 @@
 window.addEventListener('load', startAll);
 let init = JSON.parse(localStorage.getItem('cont'));
 
+
 const Preguntas = [
     {
         Pregunta: '¿Cuál es el plato típico paisa?',
-        'respuesta_1': 'Arepa rellena',
-        'respuesta_2': 'Bandeja paisa',
-        "respuesta_3": 'Arroz paisa',
+        'respuesta_1': 'Rellena',
+        'respuesta_2': 'Bandeja',
+        "respuesta_3": 'Frijoles',
         'correcta': 2
     },
     {
@@ -25,10 +26,10 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Cuál es un mito Antioqueño?',
-        'respuesta_1': 'La llorona',
+        'respuesta_1': 'La Llorona',
         "respuesta_2": 'El Sombrerón',
-        'respuesta_3': 'La pata sola',
-        'correcta': 2
+        'respuesta_3': 'La PataSola',
+        'correcta': 3
     },
     {
         Pregunta: '¿Cuál es el artista paisa más reconocido mundialmente por su arte?',
@@ -39,10 +40,10 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Cuál es el edificio más alto de la capital paisa?',
-        'respuesta_1': 'Torre Coltejer',
-        "respuesta_2": 'Torre Colpatria',
-        'respuesta_3': 'Torre del Café',
-        'correcta': 1
+        "respuesta_1": 'Torre del Café',
+        'respuesta_2': 'Centro Coltejer',
+        'respuesta_3': 'Cámara de Comercio',
+        'correcta': 2
     },
     {
         Pregunta: '¿Cuál es la batalla musical típica del paisa?',
@@ -52,22 +53,22 @@ const Preguntas = [
         'correcta': 3
     },
     {
+        Pregunta: '¿Quién era Cosiaca?',
+        'respuesta_1': 'El creador de la cultura paisa',
+        "respuesta_2": 'El creador del himno del paisa',
+        'respuesta_3': 'El creador de muchos dichos paisas',
+        'correcta': 3
+    },
+    {
         Pregunta: '¿Qué hace el arriero?',
-        'respuesta_1': 'El que recolecta dinero',
+        'respuesta_1': 'El que trabajar con chivas',
         "respuesta_2": 'El que trabaja con mulas',
-        'respuesta_3': 'EL que recolecta hormigas',
+        'respuesta_3': 'EL que trabajar hormigas',
         'correcta': 2
     },
     {
-        Pregunta: '¿Qué lleva el arriero puesto encima?',
-        'respuesta_1': 'Poncho, sombrero y carriel',
-        "respuesta_2": 'Sombrero, dulceabrigo y machete',
-        'respuesta_3': 'Ruana, carriel y zurriago',
-        'correcta': 1
-    },
-    {
-        Pregunta: '¿Cuál es el Clásico del futbol paisa?',
-        "respuesta_1":  'Medellín vs Rio Negro',
+        Pregunta: '¿Cuál es el clásico del futbol paisa?',
+        "respuesta_1": 'Medellín vs Rio Negro',
         'respuesta_2': 'Medellín vs Santa fé',
         'respuesta_3': 'Nacional vs Medellín',
         'correcta': 3
@@ -76,7 +77,7 @@ const Preguntas = [
         Pregunta: 'Sistema de transporte más importante de Medellín',
         "respuesta_1": 'Línea Copetran',
         'respuesta_2': 'Línea Circular',
-        'respuesta_3': 'Línea metro',
+        'respuesta_3': 'Línea Metro',
         'correcta': 3
     },
     {
@@ -88,24 +89,24 @@ const Preguntas = [
     },
     {
         Pregunta: '¿Cuál es el Plato típico de diciembre para los paisas?',
-        "respuesta_1": 'Asado y Lechona',
+        "respuesta_1": 'Asado y lechona',
         'respuesta_2': 'Buñuelo y natilla',
-        'respuesta_3': 'Buñuelo y Lechona',
+        'respuesta_3': 'Buñuelo y lechona',
         'correcta': 2
     },
     {
         Pregunta: '¿Qué es un perico para el paisa?',
         'respuesta_1': 'Un polvo',
-        "respuesta_2": 'café con leche',
+        "respuesta_2": 'Café con leche',
         'respuesta_3': 'Un loro',
         'correcta': 2
     },
     {
-        Pregunta: 'Universidades pública de la capital',
-        'respuesta_1': 'UdeA',
+        Pregunta: 'Universidad pública de la capital',
+        'respuesta_1': 'Uniminuto',
         "respuesta_2": 'UdeM',
-        'respuesta_3': 'Uniminuto',
-        'correcta': 1
+        'respuesta_3': 'UdeA',
+        'correcta': 3
     },
     {
         Pregunta: '¿Cuál es el dulce típico de los ancianos?',
@@ -115,6 +116,7 @@ const Preguntas = [
         'correcta': 3
     }
 ]
+
 let total_preguntas = [Preguntas.length];
 localStorage.setItem("total_preguntas", total_preguntas);
 
@@ -131,10 +133,10 @@ const cont_pregunta3 = document.querySelector("#cont3");
 const progressBar = document.querySelector('.progress-bar')
 respuesta_seleccionada = 0;
 
-let bar = document.createElement('progress')
-bar.setAttribute('value', parseInt(localStorage.getItem('progress')))
-bar.setAttribute('max', 100)
-progressBar.appendChild(bar)
+let bar = document.createElement('progress');
+bar.setAttribute('value', parseInt(localStorage.getItem('progress')));
+bar.setAttribute('max', 100);   
+progressBar.appendChild(bar);
 
 cambiar_pregunta(init);
 
@@ -144,6 +146,63 @@ function startAll(e) {
     cont_pregunta2.addEventListener('click', agregar_clase2);
     cont_pregunta3.addEventListener('click', agregar_clase3);
     boton.addEventListener('click', Evaluar_respuesta);
+}
+
+function cambiar_pregunta(cont) {
+    // iteración de preguntas
+    id_.innerHTML = cont + 1;
+    id_.innerHTML = cont + 1;
+    pregunta.innerHTML = Preguntas[cont].Pregunta;
+    respuesta1.innerHTML = Preguntas[cont].respuesta_1;
+    respuesta2.innerHTML = Preguntas[cont].respuesta_2;
+    respuesta3.innerHTML = Preguntas[cont].respuesta_3;
+
+    if (cont >= 15) {
+        boton.innerHTML = "Enviar";
+        boton.addEventListener('click', () => {
+            setTimeout(() => {
+                location.href = "../Views/puntaje.html";
+            }, 1000);
+        });
+    }
+    let progress = (parseInt(id_.textContent) * 100) / total_preguntas[0]
+    localStorage.removeItem('progress')
+    localStorage.setItem('progress', progress)
+    bar.setAttribute('value', parseInt(localStorage.getItem('progress')))
+}
+
+function Evaluar_respuesta(e) {
+    e.preventDefault();
+
+    if (respuesta_seleccionada != 0) {
+
+        let puntos = JSON.parse(localStorage.getItem('puntaje'));
+        let num = JSON.parse(localStorage.getItem('cont'));
+
+        if (esCorrecta(respuesta_seleccionada, num)) {
+            puntos += 10;
+        } else {
+            puntos -= 5;
+        }
+        localStorage.setItem('puntaje', puntos);
+
+        setTimeout(() => {
+            num++;
+            cambiar_pregunta(num);
+            localStorage.setItem('cont', num);
+
+            Limpiar_pantalla();
+        }, 900);
+    } else {
+        swal("Selecciona una respuesta", '', 'warning');
+    }
+}
+
+function Limpiar_pantalla() {
+    cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto");
+    cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto");
+    cont_pregunta3.classList.remove("seleccionado", "incorrecto", "correcto");
+    respuesta_seleccionada = 0;
 }
 
 // Funciones de eventos
@@ -170,29 +229,6 @@ function agregar_clase3(e) {
     respuesta_seleccionada = 3;
 }
 
-function cambiar_pregunta(cont) {
-    // iteración de preguntas
-    id_.innerHTML = cont + 1;
-    id_.innerHTML = cont + 1;
-    pregunta.innerHTML = Preguntas[cont].Pregunta;
-    respuesta1.innerHTML = Preguntas[cont].respuesta_1;
-    respuesta2.innerHTML = Preguntas[cont].respuesta_2;
-    respuesta3.innerHTML = Preguntas[cont].respuesta_3;
-
-    if (cont >= 15) {
-        boton.innerHTML = "Enviar";
-        boton.addEventListener('click', () => {
-            setTimeout(() => {
-                location.href = "../Views/puntaje.html";
-            }, 1000);
-        });
-    }
-    let progress = (parseInt(id_.textContent) * 100) / total_preguntas[0]
-    localStorage.removeItem('progress')
-    localStorage.setItem('progress', progress)
-    bar.setAttribute('value', parseInt(localStorage.getItem('progress')))
-
-}
 
 esCorrecta = (n_ask, id_preg) => {
     let answer;
@@ -235,38 +271,4 @@ function MarcarRespuesta(val, id) {
                 break;
         }
     }
-}
-
-function Evaluar_respuesta(e) {
-    e.preventDefault();
-
-    if (respuesta_seleccionada != 0) {
-
-        let puntos = JSON.parse(localStorage.getItem('puntaje'));
-        let num = JSON.parse(localStorage.getItem('cont'));
-
-        if (esCorrecta(respuesta_seleccionada, num)) {
-            puntos += 10;
-        } else {
-            puntos -= 5;
-        }
-        localStorage.setItem('puntaje', puntos);
-
-        setTimeout(() => {
-            num++;
-            cambiar_pregunta(num);
-            localStorage.setItem('cont', num);
-
-            Limpiar_pantalla();
-        }, 2000);
-    } else {
-        swal("Selecciona una respuesta", '', 'warning');
-    }
-}
-
-function Limpiar_pantalla() {
-    cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto");
-    cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto");
-    cont_pregunta3.classList.remove("seleccionado", "incorrecto", "correcto");
-    respuesta_seleccionada = 0;
 }

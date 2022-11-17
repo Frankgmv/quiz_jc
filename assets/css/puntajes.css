@@ -9,10 +9,6 @@
     align-items: center;
     padding: 60px;
     cursor: pointer;
-    /* -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px; */
 }
 
 .container-general-puntaje {
@@ -21,22 +17,18 @@
 }
 
 .title-text {
-    border-radius: 15px 15px 15px 15px;
     padding: 5px;
     font-size: 2rem;
     line-height: 1.4;
     text-align: center;
     background: linear-gradient(to bottom, var(--verde-btn-normal), var(--verde-btn-especial1));
     border-bottom: 2px solid var(--verde-btn-normal);
+    border-radius: 15px 0px 0px 15px;
 }
 
 .title-text:hover{
     color: var(--title-hover);
     transition: 1.2s;
-    -webkit-transition: 1.2s;
-    -moz-transition: 1.2s;
-    -ms-transition: 1.2s;
-    -o-transition: 1.2s;
 }
 
 .title-puntaje {
@@ -97,6 +89,7 @@
     background: linear-gradient(to top, var(--verde-mot1),  var(--verde-btn-normal));
     border-top: 2px solid var(--verde-main);
     height: 50px;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .complemento {
@@ -107,11 +100,7 @@
 .complemento:hover {
     font-size: 1.8rem;
     color: yellow;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
+    transition: all 1s ease;
 }
 
 .resultado-puntaje, .resultado-preguntas {
@@ -122,10 +111,6 @@
     font-size: 1.2em;
     color: var(--blanco-main);
     transition: color .4s;
-    -webkit-transition: color .4s;
-    -moz-transition: color .4s;
-    -ms-transition: color .4s;
-    -o-transition: color .4s;
 }
 
 .ptj:hover, .puntos:hover {

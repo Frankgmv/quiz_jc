@@ -7,12 +7,8 @@
     align-items: center;
     padding: 20px 35px;
     background-color: var(--font-black-main);
-    border: 6px outset var(--verde-main);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border: 2px solid var(--verde-btn-active-opacity);
+    border-radius: 7px;
 }
 
 
@@ -27,9 +23,9 @@
 }
 
 .title-base {
+    font-size: 1.9em;
     text-align: center;
     color: var(--blanco-main);
-    font-size: 1.9em;
     margin: 10px 0px;
 }
 
@@ -64,28 +60,21 @@
 }
 
 .input-data {
-    background-color: transparent;
+    background: none;
     text-align: center;
-    border-bottom: 2px inset var(--verde-btn-normal);
+    border-bottom: 1px solid var(--verde-btn-normal);
     color: var(--blanco-main);
-    font-size: 1.2em;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in;
 }
 
 .input-data:focus {
-    font-size: 1.3em;
-    background-color: #7775;
     border-color: var(--verde-btn-active);
-    transition: all .1s;
-    -webkit-transition: all .1s;
-    -moz-transition: all .1s;
-    -ms-transition: all .1s;
-    -o-transition: all .1s;
+    transition: all 0.3s ease-out;
 }
 
 .input-data::placeholder {
     color: var(--blanco-main);
-    letter-spacing: 1.2px;
-
 }
 
 .btn-submit {
@@ -97,10 +86,6 @@
     background-color: var(--verde-btn-normal);
     color: var(--blanco-second);
     transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;
 }
 
 .btn-submit:active {
@@ -117,15 +102,10 @@
 }
 
 .img-background {
-
     width: 90%;
     border: 1px solid black;
     border-radius: 50%;
     background-color: var(--blanco-main);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
 .img-direct {
