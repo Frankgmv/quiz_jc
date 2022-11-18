@@ -19,6 +19,7 @@ Form.addEventListener('click',()=>{
 })
 
 Body.addEventListener('keypress',(e)=>{
+    localStorage.setItem("NombreUsuario", Nombre.value);
     let key = e.keyCode;
     if(key == 13){
         Nombre.focus();
@@ -26,6 +27,7 @@ Body.addEventListener('keypress',(e)=>{
 })
 
 Nombre.addEventListener('keypress', (e) => {
+    localStorage.setItem("NombreUsuario", Nombre.value);
     let codeLetter = e.keyCode;
     
     if (codeLetter == 13 && Nombre.value.length > 0) {

@@ -129,12 +129,13 @@ const respuesta3 = document.querySelector("#answer3");
 const cont_pregunta1 = document.querySelector("#cont1");
 const cont_pregunta2 = document.querySelector("#cont2");
 const cont_pregunta3 = document.querySelector("#cont3");
+const body = document.querySelector("body");
 const progressBar = document.querySelector('.progress-bar')
 respuesta_seleccionada = 0;
 
 let bar = document.createElement('progress');
 bar.setAttribute('value', parseInt(localStorage.getItem('progress')));
-bar.setAttribute('max', 100);   
+bar.setAttribute('max', 100);
 progressBar.appendChild(bar);
 
 cambiar_pregunta(init);
@@ -145,25 +146,54 @@ function startAll(e) {
     cont_pregunta2.addEventListener('click', agregar_clase2);
     cont_pregunta3.addEventListener('click', agregar_clase3);
     boton.addEventListener('click', Evaluar_respuesta);
+    body.addEventListener('keypress', enter_pass)
+
 }
+
+
+function enter_pass(e) {
+    e.preventDefault();
+    let key = e.keyCode;
+
+    if (key == 13 && respuesta_seleccionada !== 0) {
+        console.log("jpr");
+        // Evaluar_respuesta();
+        body.addEventListener('keypress', Evaluar_respuesta);
+    }
+}
+
 
 function cambiar_pregunta(cont) {
     // iteración de preguntas
-    id_.innerHTML = cont + 1;
-    id_.innerHTML = cont + 1;
+    if(cont == 16){
+        id_.innerHTML = cont;
+    }else{
+        id_.innerHTML = cont + 1;
+    }
+
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
     respuesta3.innerHTML = Preguntas[cont].respuesta_3;
-
+    
     if (cont >= 15) {
+
         boton.innerHTML = "Enviar";
+
         boton.addEventListener('click', () => {
             setTimeout(() => {
                 location.href = "../Views/puntaje.html";
-            }, 1000);
+            }, 850);
+        });
+        body.addEventListener('keypress', (e) => {
+            if (e.keyCode == 13) {
+                setTimeout(() => {
+                    location.href = "../Views/puntaje.html";
+                }, 850);
+            }
         });
     }
+
     let progress = (parseInt(id_.textContent) * 100) / total_preguntas[0]
     localStorage.removeItem('progress')
     localStorage.setItem('progress', progress)
@@ -198,9 +228,9 @@ function Evaluar_respuesta(e) {
 }
 
 function Limpiar_pantalla() {
-    cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto");
-    cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto");
-    cont_pregunta3.classList.remove("seleccionado", "incorrecto", "correcto");
+    cont_pregunta1.classList.remove("seleccionado", "incorrecto", "correcto", "hidden-hover--correct", "hidden-hover--incorrect");
+    cont_pregunta2.classList.remove("seleccionado", "incorrecto", "correcto", "hidden-hover--correct", "hidden-hover--incorrect");
+    cont_pregunta3.classList.remove("seleccionado", "incorrecto", "correcto", "hidden-hover--correct", "hidden-hover--incorrect");
     respuesta_seleccionada = 0;
 }
 
@@ -211,6 +241,7 @@ function agregar_clase1(e) {
     cont_pregunta2.classList.remove("seleccionado");
     cont_pregunta3.classList.remove("seleccionado");
     respuesta_seleccionada = 1;
+
 }
 
 function agregar_clase2(e) {
@@ -219,6 +250,7 @@ function agregar_clase2(e) {
     cont_pregunta1.classList.remove("seleccionado");
     cont_pregunta3.classList.remove("seleccionado");
     respuesta_seleccionada = 2;
+
 }
 function agregar_clase3(e) {
     e.preventDefault();
@@ -248,25 +280,25 @@ function MarcarRespuesta(val, id) {
     if (val) {
         switch (id) {
             case 1:
-                cont_pregunta1.classList.add("correcto");
+                cont_pregunta1.classList.add("correcto", "hidden-hover--correct");
                 break;
             case 2:
-                cont_pregunta2.classList.add("correcto");
+                cont_pregunta2.classList.add("correcto", "hidden-hover--correct");
                 break;
             default:
-                cont_pregunta3.classList.add("correcto");
+                cont_pregunta3.classList.add("correcto", "hidden-hover--correct");
                 break;
         }
     } else {
         switch (id) {
             case 1:
-                cont_pregunta1.classList.add("incorrecto");
+                cont_pregunta1.classList.add("incorrecto", "hidden-hover--incorrect");
                 break;
             case 2:
-                cont_pregunta2.classList.add("incorrecto");
+                cont_pregunta2.classList.add("incorrecto", "hidden-hover--incorrect");
                 break;
             default:
-                cont_pregunta3.classList.add("incorrecto");
+                cont_pregunta3.classList.add("incorrecto", "hidden-hover--incorrect");
                 break;
         }
     }

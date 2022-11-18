@@ -206,3 +206,13 @@ html {
     border-color: var(--border-incorrecto);
     transition: all .3s;
 }
+
+
+.hidden-hover--correct:hover{
+    background-color: var(--correcto);
+    border-color: var(--verde-main);
+}
+.hidden-hover--incorrect:hover{
+    background-color: var(--incorrecto);
+    border-color: var(--border-incorrecto);
+}
