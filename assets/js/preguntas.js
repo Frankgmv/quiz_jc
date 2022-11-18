@@ -44,7 +44,6 @@ progressBar.appendChild(bar);
 
 cambiar_pregunta(init);
 
-window.addEventListener('load', SizeDisplay);
 function startAll(e) {
     e.preventDefault();
     cont_pregunta1.addEventListener('click', agregar_clase1);
@@ -56,12 +55,12 @@ function startAll(e) {
 
 }
 
-function SizeDisplay (){
+// TODO quitar si no se usa
+SizeDisplay = () => {
     let ancho = document.documentElement.clientWidth;
-    console.log(ancho);
-
+    let esVedad;
+    ancho<= 580 ? esVedad =true:esVedad=false
     
-
 }
 
 function enter_pass(e) {
@@ -78,17 +77,17 @@ function enter_pass(e) {
 
 function cambiar_pregunta(cont) {
     // iteración de preguntas
-    if(cont == 16){
+    if (cont == 16) {
         id_.innerHTML = cont;
-    }else{
+    } else {
         id_.innerHTML = cont + 1;
     }
-
+    
     pregunta.innerHTML = Preguntas[cont].Pregunta;
     respuesta1.innerHTML = Preguntas[cont].respuesta_1;
     respuesta2.innerHTML = Preguntas[cont].respuesta_2;
     respuesta3.innerHTML = Preguntas[cont].respuesta_3;
-    
+
     if (cont >= 15) {
 
         boton.innerHTML = "Enviar";
@@ -174,7 +173,7 @@ function agregar_clase3(e) {
 }
 
 
-function esCorrecta (n_ask, id_preg)  {
+function esCorrecta(n_ask, id_preg) {
     let answer;
     if (n_ask == Preguntas[id_preg].correcta) {
         answer = true;

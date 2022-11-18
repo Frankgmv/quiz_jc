@@ -68,10 +68,6 @@ html {
 .question:hover, .container-number:hover{
     text-shadow: 2px 2px 4px black;
     transition: all .8s;
-    -webkit-transition: all .8s;
-    -moz-transition: all .8s;
-    -ms-transition: all .8s;
-    -o-transition: all .8s;
 }
 
 .cont-answer, .buttons {
@@ -153,8 +149,8 @@ html {
 .flex-container {
     display: flex;
     width: 100%;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    /* flex-flow: row nowrap; */
+    justify-content: flex-end;
 }
 
 @media screen and (max-width:800px) {
@@ -177,6 +173,7 @@ html {
 }
 
 @media screen and (max-width: 580px) {
+
     .cont-answer {
         padding-left: 20px;
     }
@@ -186,35 +183,16 @@ html {
         padding: 5px;
     }
 
+    .container-number{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .flex-container, .buttons{
+        display: flex;
+        justify-content: center;
+    }
+
     
 }
 
-/* Clases para agregar con javaScript */
-
-.seleccionado {
-    background-color: #2229;
-    outline: .5px solid var(--blanco-main);
-}
-
-.correcto {
-    background-color: var(--correcto);
-    border-color: var(--verde-main);
-    transition: background .3s;
-}
-
-
-.incorrecto {
-    background-color: var(--incorrecto);
-    border-color: var(--border-incorrecto);
-    transition: all .3s;
-}
-
-
-.hidden-hover--correct:hover{
-    background-color: var(--correcto);
-    border-color: var(--verde-main);
-}
-.hidden-hover--incorrect:hover{
-    background-color: var(--incorrecto);
-    border-color: var(--border-incorrecto);
-}

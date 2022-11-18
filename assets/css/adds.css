@@ -1,0 +1,35 @@
+/* Clases para interaccionar con javascript */
+
+.hidden-element {
+    display: none;
+}
+
+.show-element{
+    display: block;
+}
+
+.seleccionado {
+    background-color: #2229;
+    outline: .5px solid var(--blanco-main);
+}
+
+.correcto {
+    background-color: var(--correcto);
+    border-color: var(--verde-main);
+    transition: background .3s;
+}
+
+.incorrecto {
+    background-color: var(--incorrecto);
+    border-color: var(--border-incorrecto);
+    transition: all .3s;
+}
+
+.hidden-hover--correct:hover{
+    background-color: var(--correcto);
+    border-color: var(--verde-main);
+}
+.hidden-hover--incorrect:hover{
+    background-color: var(--incorrecto);
+    border-color: var(--border-incorrecto);
+}

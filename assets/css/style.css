@@ -20,3 +20,7 @@
 
 /* Style page puntaje */
 @import "./puntajes.css";
+
+/* Styles para agregar con js */
+
+@import "./adds.css";
