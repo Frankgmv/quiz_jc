@@ -21,8 +21,8 @@ html {
 .container-general {
     background-color: #1119;
     width: 80%;
-    /* min-height: 13rem; */
     padding: 20px;
+    padding-bottom: 20px;
     border-radius: 12px;
 }
 .container-elements {
@@ -103,6 +103,7 @@ html {
 
 .buttons {
     position: relative;
+    margin: 20px;
 }
 
 .buttons a {
@@ -149,7 +150,6 @@ html {
 .flex-container {
     display: flex;
     width: 100%;
-    /* flex-flow: row nowrap; */
     justify-content: flex-end;
 }
 
@@ -191,7 +191,10 @@ html {
     .flex-container, .buttons{
         display: flex;
         justify-content: center;
+        margin-bottom: 20px;
     }
+
+
 
     
 }

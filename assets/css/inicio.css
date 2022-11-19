@@ -70,6 +70,7 @@
 
 .input-data:focus {
     border-color: var(--verde-btn-active);
+    background-color: #5558;
     transition: all 0.3s ease-out;
 }
 
