@@ -5,33 +5,24 @@ const form = document.querySelector('#form-container');
 const body = document.querySelector('body');
 
 
-let NombreUser = Nombre.value;
-let correctas = [0];
-var cont = [0];
-var puntaje = [0];
-
-localStorage.setItem("NombreUsuario", NombreUser);
-localStorage.setItem("correctas", correctas);
-localStorage.setItem("cont", cont);
-localStorage.setItem("puntaje", puntaje);
+localStorage.setItem("NombreUsuario", Nombre.value);
+localStorage.setItem("correctas", [0]);
+localStorage.setItem("cont", [0]);
+localStorage.setItem("puntaje", [0]);
 
 form.addEventListener('click',()=>{
     Nombre.focus();
 })
 
 body.addEventListener('keypress',(e)=>{
-    let codeLetter = e.keyCode;
-
-    if (codeLetter == 13 ) {
+    if (e.keyCode == 13 ) {
         Nombre.focus();
     }
 })
 
 
 Nombre.addEventListener('keypress', (e) => {
-    let codeLetter = e.keyCode;
-
-    if (codeLetter == 13 && Nombre.value.length > 0) {
+    if (e.keyCode == 13 && Nombre.value.length > 0) {
         window.location = "assets/Views/preguntas.html";
     }
 });
@@ -40,7 +31,6 @@ Boton.addEventListener('click', () => {
     if (Nombre.value.length == 0) {
         Nombre.focus();
     } else {
-        // window.location = "assets/views/preguntas.html";
         location.href = "assets/Views/preguntas.html";
     }
 });
