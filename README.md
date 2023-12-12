@@ -8,9 +8,16 @@ Este proyecto es para la graduación de Jovenes CreaTIvos 2022, el cual es hecho
 > - [Test de Cultura paisa](https://frankgmv.github.io/quiz_jc/)
 > - GitHub [Frankgmv](https://github.com/Frankgmv/)
 
+## **Si Desear mejorarlo puedes hacerlo sin prejuicios**
+
+Haz tu clone
+```ssh
+git clone https://github.com/Frankgmv/quiz_jc
+```
+
 
 > [!Tip]
-> ## Quires saber más sobre jovenes creativos
+> ## Quieres saber más sobre jovenes creativos
 > - Pagina oficial: [jovenes creativos](https://jovenes.tocaunavida.org/)
 > - Instagram: [@tocaunavida](https://www.instagram.com/tocaunavida/)
 
